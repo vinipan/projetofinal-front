@@ -1,6 +1,6 @@
 function logout() {
     localStorage.removeItem("userlogado");
-    window.location = "index.html";
+    window.location = "home.html";
 }
 
 function carregardash() {
@@ -13,7 +13,7 @@ function carregarpagina() {
     var usuariostr = localStorage.getItem("userlogado");
     if (usuariostr == null) {
         window.alert("Realize o login antes.");
-        window.location = "index.html";
+        window.location = "home.html";
     } else {
         var usuariojson = JSON.parse(usuariostr)
         document.getElementById("dados").innerHTML =
@@ -30,7 +30,7 @@ function carregarpagina() {
 
 
 function exibiragentes() {
-    fetch("http://localhost:8080/agentes")
+    fetch("https://supergrupo-backend.herokuapp.com/agentes")
         .then(res => res.json())
         .then(res => preenchercombo(res));
 }
@@ -47,7 +47,7 @@ function preenchercombo(lista) {
 
 
 function top10() {
-    fetch("http://localhost:8080/topagentes")
+    fetch("https://supergrupo-backend.herokuapp.com/topagentes")
         .then(res => res.json())
         .then(res => preenchertabela(res));
 

@@ -1,6 +1,6 @@
 function logout() {
 localStorage.removeItem("userlogado");
-window.location = "index.html";
+window.location = "home.html";
 }
 
 
@@ -9,7 +9,7 @@ function carregarpagina() {
     var parceirostr = localStorage.getItem("parceiro");
     if (usuariostr == null) {
         window.alert("Realize o login antes.");
-        window.location = "index.html";
+        window.location = "home.html";
     } else {
         var usuariojson = JSON.parse(usuariostr)
         document.getElementById("dados").innerHTML =
@@ -20,14 +20,14 @@ function carregarpagina() {
 
     }
     
-    fetch("http://localhost:8080/agentes/" + parceirostr)
+    fetch("https://supergrupo-backend.herokuapp.com/agentes/" + parceirostr)
     .then(res => res.json())
     .then(res => {        
         document.getElementById("Parceiro").innerHTML = res.nomeAgente + " / " + res.volumeTransacional;
         
     });
 
-    fetch("http://localhost:8080/status/sucesso/" + parceirostr)
+    fetch("https://supergrupo-backend.herokuapp.com/status/sucesso/" + parceirostr)
     .then(res => res.json())
     .then(res => {
         qtdSucesso = res;
@@ -35,7 +35,7 @@ function carregarpagina() {
         
     });
 
-    fetch("http://localhost:8080/status/falha/" + parceirostr)
+    fetch("https://supergrupo-backend.herokuapp.com/status/falha/" + parceirostr)
     .then(res => res.json())
     .then(res => {
         qtdFalha = res;
@@ -44,7 +44,7 @@ function carregarpagina() {
     });
 
 
-    fetch("http://localhost:8080/status/fraude/" + parceirostr)
+    fetch("https://supergrupo-backend.herokuapp.com/status/fraude/" + parceirostr)
     .then(res => res.json())
     .then(res => {
         qtdFraude = res;

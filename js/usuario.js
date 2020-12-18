@@ -14,43 +14,6 @@ function exibirusuario() {
     }
 }
 
-
-
-function cadastrar() {
-
-    var newuserjson = {
-        "nome": document.getElementById("newnome").value,
-        "email": document.getElementById("newemail").value,
-        "senha": document.getElementById("newsenha").value,
-        "foto": document.getElementById("newfoto").value
-    };
-
-    window.alert(JSON.stringify(newuserjson));
-
-    var pacote = {
-        method: "POST",
-        body: JSON.stringify(newuserjson),
-        headers: {
-            "Content-type": "application/json"
-        }
-    };
-
-    fetch("http://localhost:8080/cadastrar", pacote)
-        .then(res => res.json())
-        .then(res => {
-            localStorage.setItem("userlogado", JSON.stringify(res));
-            window.alert("Usuário " + JSON.stringify(newuserjson.email) + " cadastrado com sucesso!!!");
-            window.location = "novousuario.html";
-        })
-        .catch(err => {
-            window.alert("Deu ruim.\nChora.");
-        });
-
-
-}
-
-
-
 function logar() {
 
     if (document.getElementById("txtlogin").value.includes("@")) {
@@ -67,7 +30,7 @@ function logar() {
             }
         };
     
-        fetch("http://localhost:8080/loginemail", pacote)
+        fetch("https://supergrupo-backend.herokuapp.com/loginemail", pacote)
             .then(res => res.json())
             .then(res => {
                 localStorage.setItem("userlogado", JSON.stringify(res));
@@ -91,7 +54,7 @@ function logar() {
             }
         };
     
-        fetch("http://localhost:8080/loginracf", pacote)
+        fetch("https://supergrupo-backend.herokuapp.com/loginracf", pacote)
             .then(res => res.json())
             .then(res => {
                 localStorage.setItem("userlogado", JSON.stringify(res));
