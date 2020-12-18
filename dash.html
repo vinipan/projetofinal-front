@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashCard System</title>
+    <script type="text/javascript" src="js/dash.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body onload="carregarpagina()">
+
+    <div class="container">
+
+        <br>
+        <div class="row bottomline align-items-center">
+            <div class="col-2">
+                <a href="agentes.html"><img src="img/logopequeno.png"></a>
+
+            </div>
+            <div id="logout" class="col-6">
+
+            </div>
+
+            <div id="dados" class="col-2 text-center">
+            </div>
+            <div class="dropdown col-2">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                    <div id="foto"></div>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu drop" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" onclick="logout()" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+       
+        <div class="row">
+            <fieldset class="border atable" >
+                <legend class ='text-center'>Parceiro</legend>
+         
+         
+                  <p class="text-center" id="Parceiro">
+
+         
+                </p>
+            </fieldset>
+        </div>
+
+        <div class="row">
+            <fieldset class="border atable" >
+                <legend class ='text-center'>Sucesso</legend>
+         
+         
+                  <p class="text-center" id="Sucesso">
+
+         
+                </p>
+            </fieldset>
+
+            
+        </div>
+
+
+        <div class="row">
+            <fieldset class="border atable" >
+                <legend class ='text-center'>Falhas</legend>
+         
+         
+                  <p class="text-center" id="Falhas">
+
+         
+                </p>
+            </fieldset>
+        </div>
+
+        <div class="row">
+            <fieldset class="border atable" >
+                <legend class ='text-center'>Fraudes</legend>
+         
+         
+                  <p class="text-center" id="Fraudes">
+
+         
+                </p>
+            </fieldset>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
