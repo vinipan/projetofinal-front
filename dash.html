@@ -32,61 +32,65 @@
                     <div id="foto"></div>
                     <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu drop" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" onclick="logout()" href="#">Logout</a></li>
-                </ul>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" onclick="logout()">Logout</a>
+                </div>
             </div>
         </div>
 
         <br>
-       
-        <div class="row">
-            <fieldset class="border atable" >
-                <legend class ='text-center'>Parceiro</legend>
-         
-         
-                  <p class="text-center" id="Parceiro">
 
-         
+        <div class="row">
+            <fieldset class="border atable">
+                <legend class='text-center'>Parceiro</legend>
+
+
+                <p class="text-center textdash" id="Parceiro">
+
+
                 </p>
             </fieldset>
         </div>
 
         <div class="row">
-            <fieldset class="border atable" >
-                <legend class ='text-center'>Sucesso</legend>
-         
-         
-                  <p class="text-center" id="Sucesso">
+            <fieldset class="border atable">
+                <legend class='text-center'>Sucesso</legend>
 
-         
+
+                <p class="text-center textdash" id="Sucesso">
+                <div class="progress" id="progSucesso">
+                    
+                </div>
+
                 </p>
             </fieldset>
 
-            
+
         </div>
 
 
         <div class="row">
-            <fieldset class="border atable" >
-                <legend class ='text-center'>Falhas</legend>
-         
-         
-                  <p class="text-center" id="Falhas">
+            <fieldset class="border atable">
+                <legend class='text-center'>Falhas</legend>
 
-         
+
+                <p class="text-center textdash" id="Falhas">
+                <div class="progress" id="progFalhas">
+                </div>
+
                 </p>
             </fieldset>
         </div>
 
         <div class="row">
-            <fieldset class="border atable" >
-                <legend class ='text-center'>Fraudes</legend>
-         
-         
-                  <p class="text-center" id="Fraudes">
+            <fieldset class="border atable">
+                <legend class='text-center'>Fraudes</legend>
 
-         
+
+                <p class="text-center textdash" id="Fraudes">
+                <div class="progress" id="progFraudes">
+                </div>
+
                 </p>
             </fieldset>
         </div>

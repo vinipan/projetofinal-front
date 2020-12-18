@@ -62,7 +62,7 @@ function logar() {
             })
             .catch(err => {
                 window.alert("Login inválido. Verifique seu email/usuário e senha");
-                window.location = "index.html";
+                window.location = "home.html";
             });  
 
 
